@@ -3,12 +3,15 @@ import { AppComponent } from './app.component';
 
 export const routes: Routes = [
     {
-        path: '',
-        component: AppComponent,
-        pathMatch: 'full'
+        path: 'mf-app-component',
+        loadChildren: () => import('mf-1st-app/routes').then(m => m.routes)
     },
     {
-        path: 'flights',
-        loadChildren: () => import('mfe1/Module').then(m => m.FlightsModule)
+        path: 'mf-app-component',
+        loadChildren: () => import('mf-1st-app/app-component').then(m => m.AppComponent)
+    },
+    {
+        path: 'mf-first-component',
+        loadChildren: () => import('mf-1st-app/first-module').then(m => m.FirstModuleModule)
     },
 ];
