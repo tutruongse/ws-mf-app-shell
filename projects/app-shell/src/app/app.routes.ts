@@ -40,6 +40,6 @@ export const routes: Routes = [
             remoteName: 'mf-1st-app',
             exposedModule: './first-module'
         })
-            .then(m => m.routes)
+            .then(m => m.FirstModuleModule)
     }
 ];
