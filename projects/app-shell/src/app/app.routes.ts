@@ -22,16 +22,7 @@ export const routes: Routes = [
             remoteName: 'mf-1st-app',
             exposedModule: './routes'
         })
-            .then(m => m.routes)
-    },
-    {
-        path: 'mf-app-component',
-        loadChildren: () => loadRemoteModule({
-            type: 'manifest',
-            remoteName: 'mf-1st-app',
-            exposedModule: './app-component'
-        })
-            .then(m => m.AppComponent)
+        .then(m => m.routes)
     },
     {
         path: 'mf-first-component',
@@ -40,6 +31,6 @@ export const routes: Routes = [
             remoteName: 'mf-1st-app',
             exposedModule: './first-module'
         })
-            .then(m => m.FirstModuleModule)
+        .then(m => m.FirstModuleModule)
     }
 ];
